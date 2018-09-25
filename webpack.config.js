@@ -1,16 +1,31 @@
 module.exports = {
-    entry: __dirname + '/src/app/index.jsx',
+    entry: __dirname + '/src/index.tsx',
     output: {
         filename: "main.js",
         path: __dirname + "/build",
     },
     module: {
         rules: [
+            // {
+            //     test: /\.jsx$/,
+            //     exclude: /node_modules/,
+            //     use: {
+            //         loader: 'babel-loader'
+            //     },
+            // },
             {
-                test: /\.jsx$/,
+                test: /\.tsx$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'awesome-typescript-loader'
+                },
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                enforce: "pre",
+                use: {
+                    loader: 'source-map-loader'
                 },
             },
             {
@@ -22,7 +37,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts']
+        extensions: ['.js', '.jsx', '.ts', '.json', '.tsx']
     },
     target: "electron-main"
 };
