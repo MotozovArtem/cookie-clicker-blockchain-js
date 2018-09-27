@@ -5,9 +5,20 @@ export interface HelloProps {
     framework: string;
 }
 
-
 export class Hello extends React.Component<HelloProps, {}> {
+    showAlert() {
+        alert("Motherfucking alert, TS is just JS on steroids");
+    };
+
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        return (
+            <div className="container">
+                <div className="row">
+                    <button color="danger" onClick={this.showAlert}>
+                        Тык
+                    </button>
+                </div>
+            </div>
+        );
     }
 }

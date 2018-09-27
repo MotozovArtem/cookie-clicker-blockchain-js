@@ -22,7 +22,6 @@
     "babel-loader": "^7.1.5",
     "react": "^0.14.9",
     "react-dom": "^0.14.9",
-    "react-native": "^0.57.1",
     "reactstrap": "latest",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.0.1",
