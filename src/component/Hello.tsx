@@ -11,6 +11,11 @@ export class Hello extends React.Component<HelloProps, {}> {
     };
 
     render() {
+        let link = document.createElement('link');
+        link.id = 'favicon';
+        link.rel = 'shortcut icon';
+        link.href = 'public/ethereum-icon.png';
+        document.head.appendChild(link);
         return (
             <div className="container">
                 <div className="row">
